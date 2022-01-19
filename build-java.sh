@@ -63,6 +63,7 @@ function copyConf {
 
 log "[1] build RaspInstall.jar" 
 buildRaspInstall
+exit
 
 log "[2] copy OpenRASP Plugin"
 buildPlugin
