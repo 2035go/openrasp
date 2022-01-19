@@ -1,0 +1,39 @@
+
+windows 安装：
+右键“计算机”，选择“属性”，之后点击“高级系统设置”，点击“环境变量”，来设置环境变量，有以下系统变量需要配置：
+
+新建系统变量   MAVEN_HOME  变量值：F:\software\apache-maven-3.8.4-bin\apache-maven-3.8.4
+
+编辑系统变量  Path         添加变量值： ;%MAVEN_HOME%\bin
+
+
+
+centos  安装：
+
+yum安装maven
+
+一念思量LG  于 2021-02-04 14:20:12 发布  313  收藏
+
+订阅专栏
+wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+
+yum -y install apache-maven
+
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+
+sudo yum install -y maven
+
+ 
+
+mvn -version
+
+Apache Maven 3.5.4 (Red Hat 3.5.4-5)
+Maven home: /usr/share/maven
+Java version: 1.8.0_144, vendor: Oracle Corporation, runtime: /root/tools/installDir/jdk1.8.0_144/jre
+Default locale: zh_CN, platform encoding: UTF-8
+OS name: "linux", version: "4.18.0-193.el8.x86_64", arch: "amd64", family: "unix"
+————————————————
+版权声明：本文为CSDN博主「一念思量LG」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/u014285237/article/details/113643778
