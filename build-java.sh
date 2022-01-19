@@ -45,6 +45,7 @@ function fetchV8Library {
 	cd $BASE_DIR
 	unzip openrasp-v8.zip
 	#git submodule update --init
+	chown 777 *  -R 
 	cd openrasp-v8/java
 	#git fetch --tags
 	./fetch_native_libraries.sh
