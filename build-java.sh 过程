@@ -1854,3 +1854,239 @@ To git@github.com:2035go/openrasp.git
 分支 master 设置为跟踪来自 origin 的远程分支 master。
 [root@master openrasp]# 
 
+
+
+
+
+
+[root@master openrasp]# 
+[root@master openrasp]# 
+[root@master openrasp]# vi build-java.sh
+[root@master openrasp]# 
+[root@master openrasp]# 
+[root@master openrasp]# ./gitcom.sh  "copyConf"
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+来自 github.com:2035go/openrasp
+   d596be9..95a2824  master     -> origin/master
+更新 d596be9..95a2824
+Fast-forward
+ "build-java.sh \350\277\207\347\250\213" | 214 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 214 insertions(+)
+[master 0ca661d] copyConf
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 294 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To git@github.com:2035go/openrasp.git
+   95a2824..0ca661d  master -> master
+分支 master 设置为跟踪来自 origin 的远程分支 master。
+[root@master openrasp]# 
+[root@master openrasp]# 
+[root@master openrasp]# 
+[root@master openrasp]# ./build-java.sh 
+base dir: /home/wang/code/openrasp
+================= [1] build RaspInstall.jar ===================
+================= mvn clean package... ===================
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building rasp 1.3.6
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rasp ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.3:prepare-agent (prepare-agent) @ rasp ---
+[INFO] argLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.3/org.jacoco.agent-0.8.3-runtime.jar=destfile=/home/wang/code/openrasp/rasp-install/java/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rasp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ rasp ---
+[INFO] Compiling 34 source files to /home/wang/code/openrasp/rasp-install/java/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rasp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ rasp ---
+[INFO] Compiling 24 source files to /home/wang/code/openrasp/rasp-install/java/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rasp ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running WindowsResinInstallerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.121 s - in WindowsResinInstallerTest
+[INFO] Running WindowsUninstallerFactoryTest
+Invalid server name: tomcat
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in WindowsUninstallerFactoryTest
+[INFO] Running LinuxWeblogicUninstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in LinuxWeblogicUninstallerTest
+[INFO] Running AttacherTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in AttacherTest
+[INFO] Running WindowsJboss4UninstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in WindowsJboss4UninstallerTest
+[INFO] Running LinuxUninstallerFactoryTest
+Invalid server name: tomcat
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in LinuxUninstallerFactoryTest
+[INFO] Running TestWildflyInstallerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s - in TestWildflyInstallerTest
+[INFO] Running LinuxJboss4InstallerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in LinuxJboss4InstallerTest
+[INFO] Running WindowsWeblogicUninstallerTest
+[WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.001 s - in WindowsWeblogicUninstallerTest
+[INFO] Running LinuxInstallerFactoryTest
+Unexpected server name: xxxxxs
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in LinuxInstallerFactoryTest
+[INFO] Running InstallerFactoryTest
+List of currently supported servers are:
+- Tomcat
+- Resin
+- Weblogic
+- JbossEAP
+- Wildfly
+- JBoss 4-6
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in InstallerFactoryTest
+[INFO] Running WindowsTomcatInstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in WindowsTomcatInstallerTest
+[INFO] Running LinuxTomcatInstallerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s - in LinuxTomcatInstallerTest
+[INFO] Running AppTest
+usage: java -jar RaspInstall.jar
+ -appid <arg>        Value of cloud.appid
+ -appsecret <arg>    Value of cloud.appsecret
+ -backendurl <arg>   Value of cloud.backendurl
+ -h,--help           You're reading this!
+ -heartbeat <arg>    Value of cloud.heartbeat_interval
+ -install <arg>      Specify application server path
+ -keepconf           Do not override openrasp.yml
+ -nodep              Disable parsing of Jar dependency
+ -nodetect           Install without updating startup scripts, useful for
+                     standalone Java servers like SpringBoot
+ -pid <arg>          Specify the pid of Java server to attach
+ -prepend            Prepend the origin java options
+ -raspid <arg>       Value of rasp.id
+ -uninstall <arg>    Specify application server path
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+OpenRASP Installer for Java app servers - Copyright 2017-2021 Baidu Inc.
+For more details visit: https://rasp.baidu.com/doc/install/software.html
+
+Try 'java -jar /home/wang/code/openrasp/rasp-install/java/target/classes/ -help' for more information.
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s - in AppTest
+[INFO] Running WindowsJboss4InstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in WindowsJboss4InstallerTest
+[INFO] Running UninstallerFactoryTest
+List of currently supported servers are:
+- Tomcat
+- Resin
+- Weblogic
+- JbossEAP
+- Wildfly
+- JBoss 4-6
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in UninstallerFactoryTest
+[INFO] Running WindowsWeblogicInstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in WindowsWeblogicInstallerTest
+[INFO] Running BaseStandardInstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s - in BaseStandardInstallerTest
+[INFO] Running LinuxJbossEAPInstallerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in LinuxJbossEAPInstallerTest
+[INFO] Running WindowsInstallerFactoryTest
+Unexpected server name: xxxxxs
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in WindowsInstallerFactoryTest
+[INFO] Running LinuxWeblogicInstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s - in LinuxWeblogicInstallerTest
+[INFO] Running BaseStandardUninstallerTest
+Will attach rasp.jar to PID 12345
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s - in BaseStandardUninstallerTest
+[INFO] Running WindowsTomcatUninstallerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in WindowsTomcatUninstallerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 48, Failures: 0, Errors: 0, Skipped: 3
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.3:report (report) @ rasp ---
+[INFO] Loading execution data file /home/wang/code/openrasp/rasp-install/java/target/jacoco.exec
+[INFO] Analyzed bundle 'rasp' with 34 classes
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ rasp ---
+[INFO] Building jar: /home/wang/code/openrasp/rasp-install/java/target/RaspInstall.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:2.2:shade (default) @ rasp ---
+[INFO] Including commons-io:commons-io:jar:2.5 in the shaded jar.
+[INFO] Including commons-cli:commons-cli:jar:1.2 in the shaded jar.
+[INFO] Including org.yaml:snakeyaml:jar:1.26 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /home/wang/code/openrasp/rasp-install/java/target/RaspInstall.jar with /home/wang/code/openrasp/rasp-install/java/target/rasp-1.3.6-shaded.jar
+[INFO] Dependency-reduced POM written at: /home/wang/code/openrasp/rasp-install/java/dependency-reduced-pom.xml
+[INFO] Dependency-reduced POM written at: /home/wang/code/openrasp/rasp-install/java/dependency-reduced-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.456 s
+[INFO] Finished at: 2022-01-19T20:25:23+08:00
+[INFO] Final Memory: 28M/246M
+[INFO] ------------------------------------------------------------------------
+================= [2] copy OpenRASP Plugin ===================
+================= [3] copy rasp.yaml ===================
+[root@master openrasp]# 
+[root@master openrasp]# 
+[root@master openrasp]# 
+[root@master openrasp]# ./gitcom.sh  "copyConf"
+Already up-to-date.
+[master f785ba5] copyConf
+ 2 files changed, 86 insertions(+)
+ create mode 100644 rasp-2022-01-19/rasp/conf/openrasp.yml
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 6.90 KiB | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To git@github.com:2035go/openrasp.git
+   0ca661d..f785ba5  master -> master
+分支 master 设置为跟踪来自 origin 的远程分支 master。
+
+
+
+
