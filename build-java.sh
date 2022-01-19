@@ -43,9 +43,10 @@ function buildRaspInstall {
 # 编译 openrasp-v8
 function fetchV8Library {
 	cd $BASE_DIR
-	git submodule update --init
+	unzip openrasp-v8.zip
+	#git submodule update --init
 	cd openrasp-v8/java
-	git fetch --tags
+	#git fetch --tags
 	./fetch_native_libraries.sh
 	cd $BASE_DIR
 }
