@@ -74,10 +74,11 @@ buildRaspInstall
 
 log "[2] copy OpenRASP Plugin"
 buildPlugin
-exit
+#exit
 
 log "[3] copy rasp.yaml"
 copyConf
+exit
 
 log "[4] fetch openrasp-v8 library"
 if [[ ! -z $SKIP_V8 ]]; then
